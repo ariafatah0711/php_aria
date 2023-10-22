@@ -26,10 +26,10 @@ D. install PHP di terminal
 - lalu restart terminal dan jangan lupa nyalain si xampp
 - dengan cara
 ```
-sudo /opt/lampp/lampp start
-sudo /opt/lampp/manager-linux-x64.run
+$ sudo /opt/lampp/lampp start
+$ sudo /opt/lampp/manager-linux-x64.run
 
-sudo /opt/lampp/lamp stop // jika ingin berhenti
+$ sudo /opt/lampp/lamp stop // jika ingin berhenti
 ```
 - dan cek php nya dengan cara
 ```php --version```

@@ -10,5 +10,3 @@
         echo "ini akan di eksekusi minimal satu kali" . PHP_EOL;
         $counter++;
     } while ($counter <= 10); // perulangannya di belakang
-
-    

@@ -1,4 +1,4 @@
-# html_aria
+# php_aria
 
 The files I studied while learning PHP consist of several PHP folders and files. They also contain various fundamental information about PHP, such as data types, conditional statements, functions, classes, modules, and much more.
 

@@ -1,35 +1,46 @@
-A. pengenalan PHP
-- PHP => singkatan dari PHP: Hypertext Preprocessor
-- dikhususkan untuk web development
-- open source => php.net atau https://github.com/php/php-src
+# html_aria
 
-- proses development php
-file.php di execute dan di proses oleh php lalu akan tampil/result di outputnya
+This file that I studied while learning web development consists of HTML, CSS, and JavaScript. It also contains a wealth of basic web information and references.
 
-B. yang dibuat di php
-- server-side scripting => untuk membuat aplikasi server side
-    - dan digunakan sebagai aplikasi web menggunakan bantuan browser
-- command line scripting => digunakan untuk membuat progam berbasis command line, tanpa harus menggunakan web server
-- dekstop application => membuat aplikasi dekstop menggunakan PHP-GTK
+<p align="center">
+  <a href="#introduction">introduction</a> •
+  <a href="#table-of-contents">table of contents</a> •
+  <a href="#download">Download</a> •
+  <a href="#related">Related</a> •
+  <a href="#license">License</a>
+</p>
 
-C. menginstall php
-- jika manual tidak terlalu mudah
-- jika ingin mudah dapat menggunakan XAMPP
-- aplikasi XAMPP => mem-bundle PHP, MySQL, MariaDB, Apache HTTPD, dll
-- tutor install ada di yt dan jika telah selesai kita bisa buat path untuk php
+<p id="introduction"></p>
 
-D. install PHP di terminal
-- pergi ke bash.rc / zarsrc gittu gw lupa
-- lalu nano bash.rc dan tambahkan
-```export PATH="/opt/lampp/bin:$PATH"```
+## 🚀 introduction
+"In my journey as a web developer, I have delved into a comprehensive file encompassing the fundamental building blocks of web development – HTML, CSS, and JavaScript. This resource not only equips me with the essential coding languages but also serves as a treasure trove of invaluable web-related information and references. This amalgamation of knowledge has been instrumental in shaping my understanding of web development, making it an indispensable asset in my quest to master the art of creating web experiences."
 
-- lalu restart terminal dan jangan lupa nyalain si xampp
-- dengan cara
+<p align="left"> <a href="#">
+
+  </a>
+</p>
+
+<p id="table-of-contents"></p>
+
+## 📋 Table of Contents
+
+
+
+<p id="download"></p>
+
+## 🔨 download
+
+1. Open a terminal or command prompt on your computer.
+2. Navigate to the directory where you want to save this project.
+3. Use the following command to download the project from the GitHub repository:
+```sh
+git clone https://github.com/ariafatah0711/php_aria.git
 ```
-$ sudo /opt/lampp/lampp start
-$ sudo /opt/lampp/manager-linux-x64.run
 
-$ sudo /opt/lampp/lamp stop // jika ingin berhenti
-```
-- dan cek php nya dengan cara
-```php --version```
+<p id="related"></p>
+
+## 📈 related
+
+<p id="license"></p>
+
+## ©️ license

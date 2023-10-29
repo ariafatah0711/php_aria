@@ -1,2 +1,2 @@
 <?php
-// recursive function => kjnuhi
+// recursive function => merupakan

@@ -16,5 +16,15 @@ C. Implementasikan
     - menghapus todo list => membutuhkan nomer todo list yang akan di hapus
         - test menghapus todo list
 
-D. input data
-    - 
+D. Helper
+    - input data di php menggunakan fgets() di taruh di Helper > Input.php
+
+E. view todo list
+    - view menampilkan todolist => membuat pilihan add remove dan exit
+        - test view menampilkan todo list
+    - view menambah todo list => membuat inputan teks todo list
+        - test view menambah todo list
+    - view menghapus todo list => membuat inputan pilihan nomer todo list yang ingin di hapus
+        - test view menghapus todo list
+
+    - test seluruh aplikasi todo list

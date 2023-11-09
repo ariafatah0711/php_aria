@@ -37,13 +37,39 @@ The files I studied while learning PHP consist of several PHP folders and files.
        ```sh
        php -v
        ```
-  2. **Installing PHP Using XAMPP**
+  2. **Installing PHP on Windows**
+     - Download PHP
+        - Open a web browser and visit the official PHP website at https://www.php.net/downloads.php.
+        - Choose the PHP version you want to install. Select the Non-thread safe version if you're not using Apache with the PHP module.
+        - Download the zip file for Windows. Make sure to choose the version that matches your operating system architecture (x86 for 32-bit, x64 for 64-bit).
+     - Extract the PHP Files
+        - Open the downloaded zip file.
+        - Extract its contents to a location of your choice. For example, you can extract it to the C:\php directory.
+     - Configure PHP
+        - Open the directory where you extracted PHP.
+        - Copy the php.ini-development file and rename it to php.ini
+     - Configure the PATH
+        - Right-click on the "This PC" or "Computer" icon on your desktop or in File Explorer.
+        - Select "Properties" and choose "Advanced system settings" on the left panel.
+        - Click on "Environment Variables."
+        - In the "System variables" section, select the "Path" variable and click "Edit."
+        - Click "New" and add the path to the PHP directory (e.g., C:\php).
+        - Click "OK" to close all windows.
+     - Test PHP Installation
+        - Open the Command Prompt.
+        - Type php -v and press Enter. This should display the installed PHP version.
+</details>
+
+<details>
+  <summary><b>Installing PHP with XAMPP</b></summary>
+
+  1. **Installing PHP Using XAMPP**
      - Download and install XAMPP according to your Windows operating system.
      - Run the "XAMPP Control Panel" application.
      - Click the "Start" button next to the Apache and MySQL modules.
      - Open a web browser and go to the http://localhost address to confirm a successful XAMPP installation.
      - To access PHPMyAdmin, visit http://localhost/phpmyadmin.
-  3. **Adding XAMPP to your PATH**
+  2. **Adding XAMPP to your PATH**
      - Open the Terminal:
      - Edit the .bashrc (or .zshrc) File:
        - To edit the .bashrc file (or .zshrc if you're using Zsh), use the nano text editor or any other text editor you prefer. For example, to edit the .bashrc file, use the following command:
@@ -68,7 +94,7 @@ The files I studied while learning PHP consist of several PHP folders and files.
        ```sh
        php --version
        ```
-  4. **Start XAMPP in localhost**
+  3. **Start XAMPP in localhost**
      - Launch XAMPP with the following command (ensure you have superuser permissions):
        ```sh
        sudo /opt/lampp/lampp start

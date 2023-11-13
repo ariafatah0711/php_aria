@@ -4,10 +4,23 @@
         // di dalam namecpace kita perlu menyebutkan namespace nya
     // namespace bagus kketika kita punya beberapa class yang sama,
 
-// tanpa namespace
-    class Conflit {
+    /*
+        project/
+    |-- Data/
+    |   |-- One/
+    |   |   |-- Conflik.php
+    |   |
+    |   |-- Two/
+    |       |-- Conflik.php
+    |
+    |-- main.php
+    */
 
-    }
+
+// tanpa namespace
+    // class Conflit {
+
+    // }
     /*
     class Conflit {
         // error karena class sudah di use
@@ -16,46 +29,41 @@
 
 // menggunakan namespace
     // jika ingin gunakan subnamespace kita gunakan \ setelah namespace sebelumnya
-
-    /*
-    namespace Data\One {
-        class Conflik {
-            
-        }
-    }
-    
-    namespace Data\Two {
-        class Conflik {
-            
-        }
-    }
-    
-    $conflict1 = new \Data\One\Conflik();
-    $conflict2 = new \Data\Two\Conflik();
-    */
-
-// function dan constant di namespace
-    /*
-    namespace Helper {
-        function helpMe()
-        {
-            echo "Help Me" . PHP_EOL;
-        }
+    namespace Data\One;
+    class Conflik {
         
-        const APPLICATION = "Belajar PHP OOP";
     }
-    */
+    
+    namespace Data\Two;
+    class Conflik {        
+        
+    }
+    
+    use Data;
+    $conflict1 = new Data\One\Conflik();
+    $conflict2 = new Data\Two\Conflik();
+?>
 
-    // Helper\helpMe();
-    // echo Helper\APPLICATION . PHP_EOL;
+<?php
+// function dan constant di namespace
+namespace Helper;
+    function helpMe()
+    {
+        echo "Help Me" . PHP_EOL;
+    }
+    
+    const APPLICATION = "Belajar PHP OOP";
 
-// global namespace => namespace default saat kita membuat namespace tanpa nama akan disimpan di sebuah global namespace
+    use Helper;
+    Helper\helpMe();
+    echo Helper\APPLICATION . PHP_EOL;
+    
+    // global namespace => namespace default saat kita membuat namespace tanpa nama akan disimpan di sebuah global namespace
     /*
     namespace {
         echo "Hello Global Namespace" . PHP_EOL;
     }
     */
 
-
-    // php ku malah error jadinya ku comment semua :)
     // namespace itu seperti folder
+?>

@@ -45,4 +45,3 @@
     echo "getTire: {$car->getTire()}" . PHP_EOL;
     echo "getBrand: {$car->getBrand()}" . PHP_EOL;
     echo "isMaintenance: {$car->isMaintenance()}" . PHP_EOL;
-    

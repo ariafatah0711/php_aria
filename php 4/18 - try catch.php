@@ -1,0 +1,56 @@
+<?php
+// try catch => menangkap exceptionya yang terjadi, agar progam tidak berhenti
+    // cara menggunakan kita menggunakan block try
+        // lalu panggil method yang bisa menyebabkan exception
+    require_once "./17 - exception.php";
+
+    echo PHP_EOL;
+    $loginRequest = new LoginRequest();
+    $loginRequest->username = "aria";
+    $loginRequest->password = "123";
+    
+    // $loginRequest->username = "";
+    $loginRequest->password = ""; // error nya exxception
+
+    try {
+        validateLoginRequest($loginRequest); // jika error progam ini akan langsung ke catch
+        echo "valid" . PHP_EOL; // progam ini akan jalan hanya ketika progam sebelumnya tidak terjadi error
+    } catch(ValidationException $exception) {
+        echo "Validation Error : {$exception->getMessage()}" . PHP_EOL;
+    } catch(Exception $exception) {
+        // error untuk exception yang blank
+        echo "Exception Error : {$exception->getMessage()}" . PHP_EOL;
+    }
+
+// multiple try catch(2) => jika ingin membuat pesan kesalahan
+    // tapi hanya menggunakan 1 catch
+    // tinggal menggunakan | / or di dalam paramter catch
+    echo PHP_EOL;
+    $loginAria = new LoginRequest();
+    $loginAria->username = "";
+    $loginAria->password = "";
+
+    try {
+        validateLoginRequest($loginAria);
+    } catch (ValidationException | Exception $exception) {
+        echo "Error : {$exception->getMessage()}" . PHP_EOL;
+    }
+    // artinya kita dapat menangkap 2 jenis class exception
+
+// finally keyword => menambahkan block finaly yang akan selalu di eksekusi
+    // baik terjadi exception atau tidak
+    // ini berguna ketika setelah progam selesai kita wajib menutup koneksi ke file tersebut agar tidak menggangu di memory
+    echo PHP_EOL;
+    $loginMalik = clone $loginAria;
+    $loginMalik->username = "aria";
+    $loginMalik->password = "123";
+
+    try {
+        validateLoginRequest($loginMalik);
+        echo "valid" . PHP_EOL;
+    } catch (ValidationException | Exception $exception) {
+        echo "Error : {$exception->getMessage()}" . PHP_EOL;
+    } finally {
+        echo "Error gak Error tetap di panggil" . PHP_EOL;
+        // dan cocok untuk menutup file agar tidak memakan banyak memory
+    }

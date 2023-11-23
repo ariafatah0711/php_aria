@@ -42,7 +42,7 @@
     // ini berguna ketika setelah progam selesai kita wajib menutup koneksi ke file tersebut agar tidak menggangu di memory
     echo PHP_EOL;
     $loginMalik = clone $loginAria;
-    $loginMalik->username = "aria";
+    $loginMalik->username = "malik";
     $loginMalik->password = "123";
 
     try {
@@ -50,6 +50,33 @@
         echo "valid" . PHP_EOL;
     } catch (ValidationException | Exception $exception) {
         echo "Error : {$exception->getMessage()}" . PHP_EOL;
+    } finally {
+        echo "Error gak Error tetap di panggil" . PHP_EOL;
+        // dan cocok untuk menutup file agar tidak memakan banyak memory
+    }
+
+// debug exception => jika ingin tahu dimana letak kesalahanya
+    // menggunakan function getTrace()
+    // function ini berisikan informasi dari exception yang terjadi
+        // seperti lokasi file, baris ke berapa
+        // function mana, sampi argument yang di kirim function tersebut
+    // ini sangat cocok untuk debuging
+    echo PHP_EOL;
+    $loginZaki = clone $loginAria;
+    $loginZaki->username = "zaki";
+    // $loginZaki->password = "123";
+
+    try {
+        validateLoginRequest($loginZaki);
+        echo "valid" . PHP_EOL;
+    } catch (ValidationException | Exception $exception) {
+        echo "Error : {$exception->getMessage()}";
+
+        // sebagai string => seperti error di php biasanya
+        echo "$exception->getTraceAsString()" . PHP_EOL;
+
+        // dump trace => informasi lengkap
+        var_dump($exception->getTrace());
     } finally {
         echo "Error gak Error tetap di panggil" . PHP_EOL;
         // dan cocok untuk menutup file agar tidak memakan banyak memory

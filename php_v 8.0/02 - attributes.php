@@ -50,5 +50,3 @@
     $request->password = null;
 
     validate($request);
-
-// attribute target => 

@@ -58,3 +58,9 @@
     // jika ingin tahu sudah aktif atau belum kita dapat menggunakan
     // php -version itu akan menampilkan versi dan juga keterangan fitur opcahcenya
         // jika sudah nyala akan memapilkan "witxh Zend OPchache"
+
+// opchace akan membuat kode progam kita terhindar dari harus melakukan tokenize, parsing, dan compile lagi scr terus menerus
+    // JIT, akan membuat hasil kompilasi kita tidak perlu diterjemahkan oleh virtual machine PHP,
+        // melainkan langsung dijalankan oleh machine
+    // JIT di PHP akan mengunakan library bahasa pemograman C bernama DynASM, oleh karena itu JIT bisa
+        // mentranslate hasil compile opcodes ke instruksi machine

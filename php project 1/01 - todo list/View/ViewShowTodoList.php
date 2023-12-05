@@ -11,7 +11,7 @@ require_once __DIR__ . "/../Helper/Input.php";
 function viewShowTodoList()
 {
     while (true) {
-        system("clear");
+        // system("clear");
         showTodoList();
 
         echo PHP_EOL;
@@ -32,6 +32,8 @@ function viewShowTodoList()
         } else {
             echo "Pilihan Tidak Dimengerti" . PHP_EOL;
         }
+
+        sleep(1);
     }
 
     echo "Sampai Jumpa Lagi";
